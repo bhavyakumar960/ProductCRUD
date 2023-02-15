@@ -7,25 +7,19 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProductCRUD Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	 
-	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.version>5.2.16.RELEASE</spring.version>
 	</properties>
-	
-	
 	<dependencies>
-		
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<!-- ye apne aap hi core aur context waali dependency apne andar include krta hai-->
@@ -33,49 +27,46 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.0.5</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>5.2.3.RELEASE</version>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.4.2.Final</version>   <!-- kam version ki dependency nhi laani-->
+			<version>5.4.2.Final</version> <!-- kam version ki dependency nhi laani-->
 		</dependency>
-
-		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+		  <!-- Servlet Library -->
+       <dependency>
+           <groupId>javax.servlet</groupId>
+           <artifactId>javax.servlet-api</artifactId>
+           <version>3.1.0</version>
+           <scope>provided</scope>
+       </dependency>
 	</dependencies>
-	
 	<build>
 		<finalName>ProductCRUD</finalName>
-		
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -96,11 +87,19 @@
 					<configuration>
 						<path>/</path>
 
-						<contextReloadable>true</contextReloadable>
+						<!--<contextReloadable>true</contextReloadable>-->
 					</configuration>
 				</plugin>
+				<!--<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<port>8080</port>
+						<contextReloadable>true</contextReloadable>
+					</configuration>
+				</plugin>-->
 			</plugins>
 		</pluginManagement>
-		
 	</build>
 </project>

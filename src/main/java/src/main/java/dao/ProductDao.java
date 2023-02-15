@@ -1,5 +1,7 @@
 package src.main.java.dao;
 
+import java.util.List;
+
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +19,23 @@ public class ProductDao {
 		this.hibernateTemplate.saveOrUpdate(product);
 	}
 	
+	//get all products
+	public List<Product> getAllProducts(){
+		List<Product> products = hibernateTemplate.loadAll(Product.class);
+		return products;
+	}
+	
+	//get a single product
+	public Product getProduct(int id) {
+		return hibernateTemplate.get(Product.class,id);
+	}
+	
+	//delete a product
+	@Transactional
+	public void deleteProduct(int id) {
+		Product product = getProduct(id);
+		hibernateTemplate.delete(product);
+	}
 	
 	//getters and setters
 	public HibernateTemplate getHibernateTemplate() {
