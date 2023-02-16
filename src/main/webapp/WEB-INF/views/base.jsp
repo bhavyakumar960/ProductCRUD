@@ -19,3 +19,4 @@
 <!-- agar humne model.addAttribute ki help se title send kiya to jo title send krenge wo display hoga wrna
 													 by default name show hoga title mein...My Product App -->	
 <title><c:out value="${title }">My Product App</c:out></title>
+

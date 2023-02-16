@@ -10,15 +10,18 @@
 	div{margin: 40px;}
 	.in{padding: 15px;}
 	.on{padding: 10px;}
+	.form-control{background-color:#FFFFCC;}
 </style>
 
 </head>
-<body>
+<body style=" background-repeat: no-repeat;
+  background-size: cover;color: green;font-size: 20px; " background="<c:url value="/resources/images/4.jpeg" />">
+
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 
-				<h1 class="text-center mb-3">Fill the Product Details...</h1>
+				<h1 class="text-center mb-3" style="color:brown;">Fill the Product Details...</h1>
 
 				<form action="handle-product" method="post">
 

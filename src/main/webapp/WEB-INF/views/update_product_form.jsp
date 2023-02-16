@@ -10,7 +10,7 @@
 div {
 	margin: 40px;
 }
-
+.form-control{background-color:#FFFFCC;}
 .in {
 	padding: 15px;
 }
@@ -21,7 +21,10 @@ div {
 </style>
 
 </head>
-<body>
+
+<body style=" background-repeat: no-repeat;
+  background-size: cover;color: green;font-size: 20px; " background="<c:url value="/resources/images/4.jpeg" />">
+
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">

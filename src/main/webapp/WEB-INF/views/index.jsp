@@ -6,20 +6,22 @@
 <meta charset="UTF-8">
 <%@include file="base.jsp"%>
 <style type="text/css">
-.big{font-size: 22px;}
+	.big{font-size: 22px;}
+/* 	td{color:green;} */
 </style>
 </head>
-<body>
+<body style=" background-repeat: no-repeat;
+  background-size: cover;color: brown;font-size: 20px; " background="<c:url value="/resources/images/4.jpeg" />">
 
 	<div class="container mt-5">
-		<div class="row">
+		<div class="row mt-2">
 			<div class="col-md-8 offset-md-2">
 
 				<h1 class="text-center mb-4">...My Products...</h1>
 
 				<table class="table table-striped table-hover">
 					<thead>
-						<tr>
+						<tr style="color:green;">
 							<!-- <th scope="col">Id</th> -->
 							<th scope="col">Product Name</th>
 							<th scope="col">Product Description</th>
